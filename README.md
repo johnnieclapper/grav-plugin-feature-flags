@@ -19,42 +19,46 @@ PHP 8.0.11 (cli)
 
 ### Roadmap
 
-20. October 2021
+24. October 2021
 
 - Review project and prepare for upload on https://getgrav.org/downloads/plugins
 
-19. October 2021
+#### 21. October 2021
+
+- Connect backend with UnleashController.php
+
+#### 19. October 2021
 
 - Initial push to this github repository
 - Write a first version of README.md for github
 
-12. October 2021
+#### 12. October 2021
 
 - Add custom feature flag extension
 - Prepare Plugin project for transfer from GitLab to github repository
 
-11. October 2021
+#### 11. October 2021
 
 - Complete fine tuning and multistage environment testing
 - Added environment for localhost
 
-10. October 2021
+#### 10. October 2021
 
 - Main Development session
 - Backend fine tuning
 
-9.  October 2021
+#### 09.  October 2021
 
 - Preparing Plugin Backend
 
 ![image](https://user-images.githubusercontent.com/30041108/136654709-934a6743-c063-4969-880c-879769848733.png)
 
-8.  October 2021
+#### 08.  October 2021
 
 - Updating the project title
 - Preparing development session
 
-6.  October 2021
+#### 06.  October 2021
 
 - We just started developing. The Plugin will be available soon.
 

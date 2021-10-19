@@ -4,12 +4,13 @@
 # Unleash Feature Flags with GitLab
 This plugin for GRAV CMS at https://getgrav.org/ integrates the Unleash Feature Flag Service with GitLab
 
-14. October 2021
+
+20. October 2021
 - Review project and prepare for upload on https://getgrav.org/downloads/plugins
 
-13. October 2021
+19. October 2021
 - Initial push to this github repository
-- Write an first version of README.md for github
+- Write a first version of README.md for github
 
 12. October 2021
 - Add custom feature flag extension

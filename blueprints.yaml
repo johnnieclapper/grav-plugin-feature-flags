@@ -1,0 +1,241 @@
+name: Featureflags
+slug: featureflags
+type: plugin
+version: 0.1.0
+description: Bla bla
+icon: plug
+author:
+  name: dev
+  email: johnnie.clapper@none-records.com
+homepage: https://github.com/dev/grav-plugin-featureflags
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/dev/grav-plugin-featureflags/issues
+docs: https://github.com/dev/grav-plugin-featureflags/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_FEATUREFLAGS.TEXT_VARIABLE
+      help: PLUGIN_FEATUREFLAGS.TEXT_VARIABLE_HELP
+
+    system_tabs:
+      type: tabs
+      classes: side-tabs
+
+      fields:
+        settings:
+          type: tab
+          title: Plugin - General Settings
+
+          fields:
+            configuration:
+              type: section
+              title: Plugin Configuration
+              underline: true
+
+            # plugin_manual:
+            #   title:
+            #     "This chapter obviously needs better formatting. :-P 
+            #     To create and enable a feature flag in GitLab:
+
+            #     Navigate to your project’s Deployments > Feature Flags.
+            #     Click the New feature flag button.
+            #     Enter a name that starts with a letter and contains only lowercase letters, digits, underscores (_), or dashes (-), and does not end with a dash (-) or underscore (_).
+            #     Enter a description (optional, 255 characters max).
+            #     Enter details about how the flag should be applied:
+            #     In GitLab 13.0 and earlier, add Environment specs. For each environment, include the Status (default enabled) and Rollout strategy (defaults to All users).
+            #     In GitLab 13.1 and later, add Feature Flag Strategies. For each strategy, include the Type (defaults to All users) and Environments (defaults to all environments).
+            #     Click Create feature flag."
+            #   type: section
+            #   # classes: notice
+            #   underline: false
+
+            plugin_text:
+              type: display
+              # size: large
+              style: vertical
+              markdown: true
+              classes: notice
+              content: "
+                <style>
+                  .unleash_intro {
+                    font-size: 1.2em;
+                    padding: 1em;
+                  }
+                  .unleash_intro ul li {margin: 0.25em 0;}
+                </style>
+                <div class='unleash_intro'>
+                  <sup>This chapter still needs better formatting. Enjoy! :)</sup><br><br>
+                  <strong>To create and enable a feature flag in GitLab:</strong>
+                  <ul>
+                    <li>Navigate to your project’s Deployments > Feature Flags.</li>
+                    <li>Click the New feature flag button.</li>
+                    <li>Enter a name that starts with a letter and contains <strong>only</strong> lowercase letters, digits, underscores (_), or dashes (-), and <strong>does not end</strong> with a dash (-) or underscore (_).</li>
+                    <li>Enter a description (optional, 255 characters max).</li>
+                    <li>Enter details about how the flag should be applied:<br>
+                      <ul>
+                        <li>In GitLab 13.0 and earlier, add Environment specs. For each environment, include the Status (default enabled) and Rollout strategy (defaults to All users).</li>
+                        <li>In GitLab 13.1 and later, add Feature Flag Strategies. For each strategy, include the Type (defaults to All users) and Environments (defaults to all environments).</li>
+                      </ul>
+                    </li>
+                    <li>Click Create feature flag.</li>
+                  </ul>
+                </div>
+              "
+
+            spacer_plugtext:
+              type: spacer
+              underline: 1
+
+            api_url:
+              type: text
+              description: URL where the client (application) connects to get a list of feature flags.
+              size: medium
+              classes: fancy
+              label: "API URL"
+
+            application_name:
+              type: text
+              help: Set the Unleash client application name to the name of the environment your application runs in. This value is used to match environment scopes.
+              description: The name of the environment the application runs in (not the name of the application itself).
+              label: "application name"
+              size: medium
+
+            instance_id:
+              type: text
+              description: Unique token that authorizes the retrieval of the feature flags.
+              label: "instance ID"
+              size: medium
+
+        ip_protection:
+          type: tab
+          title: Feature - IP Protection
+
+          fields:
+            ip_feature_configuration:
+              type: section
+              title: Feature Configuration
+              underline: true
+
+            allowed_ip:
+              type: array
+              label: Allowed IP
+              description: "Example: '123.456.789.123' Only allowed IPs are able to see your website. Add an entry for each allowed IP."
+              value_only: IP
+              size: medium
+              help: Allow access to website for certain IPs.
+
+        pw_protection:
+          type: tab
+          title: Feature - Password Protection
+
+          fields:
+            pw_feature_configuration:
+              type: section
+              title: Feature Configuration
+              underline: true
+
+            login_name:
+              type: text
+              help: Define your username
+              label: "User Name"
+              size: medium
+
+            login_password:
+              type: text
+              help: Define your password
+              label: "User Password"
+              size: medium
+
+        splash_screen:
+          type: tab
+          title: Feature - Splash Screen
+
+          fields:
+            splash_screen_feature_configuration:
+              type: section
+              title: Feature Configuration
+              underline: true
+            splash_screen.content:
+              type: markdown
+              label: Splash Screen Content
+              autofocus: true
+
+        custom_features:
+          type: tab
+          title: "Feature - Custom Codes"
+
+          fields:
+            custom_feature_list_configuration:
+              title: "Custom Features"
+              type: section
+              underline: true
+
+            # custom_feature_manual:
+            #   title:
+            #     'Define your feature code here, then insert the following method in your website code: <?php
+            #     if ($unleash->isEnabled("AwesomeFeature")) {
+            #       //do some magic
+            #     } else {
+            #       //do old boring stuff
+            #     }'
+            #   type: section
+            #   classes: warning
+            #   underline: false
+            
+            custom_feature_text:
+              type: display
+              # size: large
+              style: vertical
+              markdown: true
+              classes: notice
+              content: "
+                <style>
+                  .unleash_intro {
+                    font-size: 1.2em;
+                    padding: 1em;
+                  }
+                  .unleash_intro ul li {margin: 0.25em 0;}
+                  .unleash_code {
+                    background-color: #f9f2f4;
+                  }
+                </style>
+                <div class='unleash_intro'>
+                    <p>Define your feature code here, then insert the following method in your website code:</p>
+                    <code>if ($unleash->isEnabled(\"AwesomeFeature\")) { // do some magic } else { // do old boring stuff }</code>
+                </div>
+              "
+
+            custom_feature_list:
+              type: list
+              style: vertical
+              fields:
+                .title:
+                  type: text
+                  placeholder: "AwesomeFeature"
+                  label: "Name of your feature"
+                  help: ""
+                  size: medium  
+                .code:
+                  type: textarea 
+                  placeholder: "Put your custom code here"
+                  label: "Your feature code"
+                  help: ""
+                  size: medium

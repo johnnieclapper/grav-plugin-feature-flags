@@ -1,72 +1,24 @@
-**\*** THIS IS A WORK IN PROGRESS PROJECT, SEE ROADMAP BELOW **\***
-
-# GRAV plugin to install the Unleash Feature Flags for GitLab
+# GRAV plugin which integrates the Feature Flags for GitLab
 
 ### Description
 
-This plugin for Grav CMS (https://getgrav.org/) integrates the Unleash Feature Flag Service for the DevOps plattform GitLab (https://gitlab.com/).
+The **Featureflags** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). It integrates [Feature Flags](https://docs.gitlab.com/ee/operations/feature_flags.html) Service for the DevOps plattform GitLab (https://gitlab.com/).
 
-Grav is a modern flat file-file CMS. It was voted "Best Flat File CMS" in 2017, 2019 & 2020 by CMS Critic's People Choice Award. We have experienced it as a stable, fast and flexible content management system to serve all kinds of websites.
+**GITLAB FEATURE FLAG DASHBOARD**
 
-Combinded with a multi stage environment CICD pipeline on GitLab and its built in issue Kanban you can easily run your website development in an agile environment which serves comfortable workflows for developmers and development teams in marketing and communication agencies out of the box.
+GitLab provides a deployment dashboard to control feature flags which is ideal for multi-stage continuous deployment CI/CD pipelines in DevOps environments. Gitlab feature flags use [Unleash](https://www.getunleash.io/)as the feature flag engine.
+
+With Feature Flags, you can deploy your application’s new features to production in smaller batches. You can toggle a feature on and off to subsets of users, helping you achieve Continuous Delivery.
+
+**GRAV CONTENT MANAGEMENT SYSTEM**
+
+Grav is a modern flat file-file CMS. It was voted "Best Flat File CMS" in 2017, 2019 & 2020 by CMS Critic's People Choice Award.
 
 ### Getting Started
 
-Requirements:
-PHP 8.0.11 (cli)
-
-...
-
-### Roadmap
-
-24. October 2021
-
-- Review project and prepare for upload on https://getgrav.org/downloads/plugins
-
-#### 21. October 2021
-
-- Connect backend with UnleashController.php
-
-#### 19. October 2021
-
-- Initial push to this github repository
-- Write a first version of README.md for github
-
-#### 12. October 2021
-
-- Add custom feature flag extension
-- Prepare Plugin project for transfer from GitLab to github repository
-
-#### 11. October 2021
-
-- Complete fine tuning and multistage environment testing
-- Added environment for localhost
-
-#### 10. October 2021
-
-- Main Development session
-- Backend fine tuning
-
-#### 09.  October 2021
-
-- Preparing Plugin Backend
-
-![image](https://user-images.githubusercontent.com/30041108/136654709-934a6743-c063-4969-880c-879769848733.png)
-
-#### 08.  October 2021
-
-- Updating the project title
-- Preparing development session
-
-#### 06.  October 2021
-
-- We just started developing. The Plugin will be available soon.
-
-# Featureflags Plugin
-
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of the plugin.**
-
-The **Featureflags** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). Bla bla
+**Requirements:**
+GRAV v1.7.4 or higher
+PHP 8.0.11 (cli) or higher
 
 ## Installation
 
@@ -106,6 +58,8 @@ enabled: true
 
 Note that if you use the Admin Plugin, a file with your configuration named featureflags.yaml will be saved in the `user/config/plugins/`-folder once the configuration is saved in the Admin.
 
+** WORK IN PROGRESS FROM HERE **
+
 ## Usage
 
 **Describe how to use the plugin.**
@@ -116,4 +70,5 @@ Note that if you use the Admin Plugin, a file with your configuration named feat
 
 ## To Do
 
-- [ ] Future plans, if any
+- [ ] Connect backend with code
+- [ ] Style Splash-Screen

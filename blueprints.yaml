@@ -173,9 +173,14 @@ form:
               type: section
               title: Feature Configuration
               underline: true
+            splash_screen.image:
+              type: text
+              label: Image URL (going from root DIR of GRAV)
+              autofocus: true
             splash_screen.content:
-              type: markdown
+              type: textarea
               label: Splash Screen Content
+              rows: 10
               autofocus: true
 
         custom_features:

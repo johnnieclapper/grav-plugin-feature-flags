@@ -56,12 +56,15 @@ $absolutePathToEnvFile = '/var/www/html/.env';
 
 ## Namespace for Feature Flags
 namespace Grav\Plugin\Featureflags;
+use Grav\Common\Grav;
 
 ## Script that holds and connects feature flags with GitLab
 use Unleash\Client\UnleashBuilder;
 
 class UnleashController {
     public static function createUnleashClient() {
+        $grav = Grav::instance();
+        $env = $grav['config']->get('plugins.featureflags');
         $unleash = UnleashBuilder::create()
         ## This is where PHP fills in an environment variable from .env
         ->withGitlabEnvironment(getenv('CI_ENVIRONMENT_NAME'))
@@ -87,14 +90,15 @@ class UnleashController {
         #     var_dump(getenv('CI_ENVIRONMENT_NAME'));
         #     die();
         #   }
-
+        
         ## Unleash ip-protection feature
         ##
         if ($unleash->isEnabled("ip-protection")) {
             ## 172.24.0.1 = IP localhost Johnnie
             ## 172.18.0.2 = IP Johnnie web
-            $ips = array("172.24.0.1", "172.18.0.2");
-            if(!in_array($_SERVER['REMOTE_ADDR'], $ips))
+            ## Print array of IPs
+            ## echo '<pre>'; print_r($env['allowed_ip']); echo '</pre>';
+            if(!in_array($_SERVER['REMOTE_ADDR'], $env['allowed_ip']))
             {
                 header("HTTP/1.1 401 Unauthorized");
                 exit;
@@ -112,7 +116,9 @@ class UnleashController {
                 echo '<h1>Access Denied!</h1>';
                 exit;
             } else {
-                if(!($_SERVER['PHP_AUTH_USER']=='admin' and md5($_SERVER['PHP_AUTH_PW'])=='21232f297a57a5a743894a0e4a801fc3'))
+                $adminUser = $env['login_name'];
+                $adminPassword = $env['login_password'];
+                if(!($_SERVER['PHP_AUTH_USER'] == $adminUser and md5($_SERVER['PHP_AUTH_PW']) == $adminPassword))
                 {
                     header('HTTP/1.0 401 Unauthorized');
                     exit;

@@ -50,7 +50,7 @@ class DotEnv
 
 use DevCoder\DotEnv;
 
-$absolutePathToEnvFile = 'var/www/html/.env';
+$absolutePathToEnvFile = '/var/www/html/.env';
 
 (new DotEnv($absolutePathToEnvFile))->load();
 

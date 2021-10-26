@@ -35,8 +35,8 @@ Custom feature flags configured inside the plugin will be added in the next deve
 ## Getting Started
 
 **Requirements:**
-GRAV v1.7.4 or higher
-PHP 8.0.11 (cli) or higher
+- GRAV v1.7.4 or higher
+- PHP 8.0.11 (cli) or higher
 
 <br><br>
 

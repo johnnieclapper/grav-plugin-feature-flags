@@ -1,4 +1,4 @@
-v0.1.0
+v0.1.1
 
 # GRAV plugin which integrates Unleash Feature Flags for GitLab
 

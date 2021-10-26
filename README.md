@@ -25,7 +25,7 @@ Custom feature flags configured inside the plugin will be added in the next deve
 | Environment | Development | Staging | Production |
 |------| ------ | ------ | ------ |
 | URL | `dev.yourDomain.com` | `staging.yourDomain.com` | `(www.)yourDomain.com` |
-| Demo | [dev.agile-digitalisierung.de](https://dev.agile-digitalisierung.de) | [staging.agile-digitalisierung.de](https://dev.agile-digitalisierung.de) | [www.agile-digitalisierung.de](https://dev.agile-digitalisierung.de) |
+| Demo | [dev.agile-digitalisierung.de](https://dev.agile-digitalisierung.de) | [staging.agile-digitalisierung.de](https://staging.agile-digitalisierung.de) | [www.agile-digitalisierung.de](https://agile-digitalisierung.de) |
 | Stabilty | allowed to break | semi-stable | stable |
 | Scope| internal client | external client | public users |
 | Security | ip protected | password protected | published to everyone |

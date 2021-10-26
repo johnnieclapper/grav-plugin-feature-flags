@@ -1,3 +1,5 @@
+v0.1.0
+
 # GRAV plugin which integrates Unleash Feature Flags for GitLab
 
 ## Description
@@ -35,6 +37,8 @@ Custom feature flags configured inside the plugin will be added in the next deve
 **Requirements:**
 GRAV v1.7.4 or higher
 PHP 8.0.11 (cli) or higher
+
+<br><br>
 
 +++++ It's not an official plugin yet, so you'll have to go with Manual Installation for now. Please ignore the other two options. +++++
 

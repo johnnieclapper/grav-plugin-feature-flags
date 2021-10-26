@@ -1,3 +1,10 @@
+# v0.1.1-alpha
+##  26/10/2021
+
+1. [](#new)
+    * Add .env description in README.md
+    * Fix formatting
+
 # v0.1.0-alpha
 ##  26/10/2021
 

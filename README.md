@@ -15,7 +15,7 @@ GitLab provides a deployment dashboard to control feature flags which is ideal f
 With Feature Flags, you can deploy your application’s new features to production in smaller batches. You can toggle a feature on and off to subsets of users, helping you achieve Continuous Delivery.
 
 
-### v0.1.0 of this plugin includes the following three features out-of-the-box
+### v0.1.1 of this plugin includes the following three features out-of-the-box
 Custom feature flags configured inside the plugin will be added in the next development stage of the plugin. For now these three features are very helpful for development of digital projects in web agnecies such as websites etc.
 
 ![image](https://user-images.githubusercontent.com/30041108/138959349-2327ba26-89fd-4808-ba29-3dcbc00a09fb.png)

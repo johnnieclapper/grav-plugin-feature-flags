@@ -61,6 +61,17 @@ To install the plugin manually, download the zip-version of this repository and 
 You should now have all the plugin files under
 
     /your/site/grav/user/plugins/featureflags
+    
+Please note that Grav should now fail because the plugin is looking for the name of the environment it's running in.
+You'll have to point the path in /user/plugins/featureflags/classes/UnleashController.php to your .env file. If you don't have any, just create one in the root directory of your project and fix the $absolutePathToEnvFile variable to your needs.
+
+$absolutePathToEnvFile = '/var/www/html/.env';
+
+Inside your .env file please add the following line: \
+CI_ENVIRONMENT_NAME=nameofyourenvironment
+
+It tells the plugin which environment your application runs in.
+
 
 > NOTE: This plugin is a modular component for Grav which may require other plugins to operate, please see its [blueprints.yaml-file on GitHub](https://github.com//grav-plugin-featureflags/blob/master/blueprints.yaml).
 

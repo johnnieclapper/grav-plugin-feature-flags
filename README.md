@@ -6,35 +6,33 @@ v0.1.1
 
 The **Featureflags** Plugin is an extension for [Grav CMS](http://github.com/getgrav/grav). It integrates the [Feature Flags](https://docs.gitlab.com/ee/operations/feature_flags.html) Service for the DevOps plattform [GitLab](https://gitlab.com/). Grav is a modern flat file-file CMS. It was voted "Best Flat File CMS" in 2017, 2019 & 2020 by CMS Critic's People Choice Award.
 
-
-
 ### GitLab Feature Flag Dashboard
 
 GitLab provides a deployment dashboard to control feature flags which is ideal for multi-stage continuous deployment CI/CD pipelines in DevOps environments. Gitlab feature flags use [Unleash](https://www.getunleash.io/) as the feature flag engine.
 
 With Feature Flags, you can deploy your application’s new features to production in smaller batches. You can toggle a feature on and off to subsets of users, helping you achieve Continuous Delivery.
 
-
 ### v0.1.1 of this plugin includes the following three features out-of-the-box
-Custom feature flags configured inside the plugin will be added in the next development stage of the plugin. For now these three features are very helpful for development of digital projects in web agnecies such as websites etc.
+
+Custom feature flags configured inside the plugin will be added in the next development stage of the plugin. For now these three features are very helpful for development of digital projects in web agencies such as websites etc.
 
 ![image](https://user-images.githubusercontent.com/30041108/138959349-2327ba26-89fd-4808-ba29-3dcbc00a09fb.png)
 
 ### Overview
 
-| Environment | Development | Staging | Production |
-|------| ------ | ------ | ------ |
-| URL | `dev.yourDomain.com` | `staging.yourDomain.com` | `(www.)yourDomain.com` |
-| Demo | [dev.agile-digitalisierung.de](https://dev.agile-digitalisierung.de) | [staging.agile-digitalisierung.de](https://staging.agile-digitalisierung.de) | [www.agile-digitalisierung.de](https://agile-digitalisierung.de) |
-| Stabilty | allowed to break | semi-stable | stable |
-| Scope| internal client | external client | public users |
-| Security | ip protected | password protected | published to everyone |
-| Visibility Feature Flags | ip protection | password protection | splash screen |
-
+| Environment              | Development                                                          | Staging                                                                      | Production                                                       |
+| ------------------------ | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| URL                      | `dev.yourDomain.com`                                                 | `staging.yourDomain.com`                                                     | `(www.)yourDomain.com`                                           |
+| Demo                     | [dev.agile-digitalisierung.de](https://dev.agile-digitalisierung.de) | [staging.agile-digitalisierung.de](https://staging.agile-digitalisierung.de) | [www.agile-digitalisierung.de](https://agile-digitalisierung.de) |
+| Stabilty                 | allowed to break                                                     | semi-stable                                                                  | stable                                                           |
+| Scope                    | internal client                                                      | external client                                                              | public users                                                     |
+| Security                 | ip protected                                                         | password protected                                                           | published to everyone                                            |
+| Visibility Feature Flags | ip protection                                                        | password protection                                                          | splash screen                                                    |
 
 ## Getting Started
 
 **Requirements:**
+
 - GRAV v1.7.4 or higher
 - PHP 8.0.11 (cli) or higher
 
@@ -61,7 +59,7 @@ To install the plugin manually, download the zip-version of this repository and 
 You should now have all the plugin files under
 
     /your/site/grav/user/plugins/featureflags
-    
+
 Please note that Grav should now fail because the plugin is looking for the name of the environment it's running in.
 You'll have to point the path in /user/plugins/featureflags/classes/UnleashController.php to your .env file. If you don't have any, just create one in the root directory of your project and fix the $absolutePathToEnvFile variable to your needs.
 
@@ -71,7 +69,6 @@ Inside your .env file please add the following line: \
 CI_ENVIRONMENT_NAME=nameofyourenvironment
 
 It tells the plugin which environment your application runs in.
-
 
 > NOTE: This plugin is a modular component for Grav which may require other plugins to operate, please see its [blueprints.yaml-file on GitHub](https://github.com//grav-plugin-featureflags/blob/master/blueprints.yaml).
 

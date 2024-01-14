@@ -7,11 +7,11 @@ icon: plug
 author:
   name: dev
   email: johnnie.clapper@none-records.com
-homepage: https://github.com/dev/grav-plugin-featureflags
+homepage: https://github.com/johnnieclapper/grav-plugin-feature-flags
 demo: http://demo.yoursite.com
 keywords: grav, plugin, etc
-bugs: https://github.com/dev/grav-plugin-featureflags/issues
-docs: https://github.com/dev/grav-plugin-featureflags/blob/develop/README.md
+bugs: https://github.com/johnnieclapper/grav-plugin-feature-flags/issues
+docs: https://github.com/johnnieclapper/grav-plugin-feature-flags/blob/develop/README.md
 license: MIT
 
 dependencies:

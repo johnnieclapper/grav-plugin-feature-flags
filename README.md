@@ -70,7 +70,7 @@ CI_ENVIRONMENT_NAME=nameofyourenvironment
 
 It tells the plugin which environment your application runs in.
 
-> NOTE: This plugin is a modular component for Grav which may require other plugins to operate, please see its [blueprints.yaml-file on GitHub](https://github.com//grav-plugin-featureflags/blob/master/blueprints.yaml).
+> NOTE: This plugin is a modular component for Grav which may require other plugins to operate, please see its [blueprints.yaml-file on GitHub](https://github.com/johnnieclapper/grav-plugin-feature-flags/blob/main/blueprints.yaml).
 
 ## Admin Plugin
 

@@ -3,7 +3,7 @@
   "type": "grav-plugin",
   "description": "Bla bla",
   "keywords": ["plugin"],
-  "homepage": "https://github.com/dev/grav-plugin-featureflags",
+  "homepage": "https://github.com/johnnieclapper/grav-plugin-feature-flags",
   "license": "MIT",
   "authors": [
     {
